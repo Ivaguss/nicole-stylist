@@ -226,9 +226,17 @@ section{padding:88px 0}
 .bundle-new{font-family:'Playfair Display',serif;font-size:44px;color:var(--gold);margin:6px 0 20px}
 
 /* ---------- portfolio ---------- */
-.pf-card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5}
+.pf-card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5;align-self:start}
 .pf-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
 .pf-card:hover img{transform:scale(1.05)}
+/* карточки-плакаты (мудборды с подписями по краям): показываем целиком, подпись под картинкой */
+.pf-card--sheet{aspect-ratio:auto;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column}
+.pf-card--sheet img{height:auto;object-fit:contain}
+.pf-card--sheet:hover img{transform:none}
+.pf-card--sheet .pf-tag{position:static;align-self:flex-start;margin:16px 0 0 18px;background:var(--ink);color:var(--paper)}
+.pf-card--sheet .pf-caption{position:static;background:none;padding:8px 18px 18px}
+.pf-card--sheet .pf-caption h3{color:var(--ink)}
+.pf-card--sheet .pf-caption p{color:var(--ink-soft)}
 .pf-tag{
   position:absolute;top:14px;left:14px;
   background:var(--paper);padding:5px 10px;border-radius:3px;
