@@ -293,7 +293,7 @@ section{padding:88px 0}
 .blog-card p{color:var(--ink-soft);font-size:14.5px}
 
 /* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 @media(max-width:720px){.contact-grid{grid-template-columns:1fr}}
 .contact-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:30px}
 .contact-card h3{font-size:20px;margin-bottom:10px}
